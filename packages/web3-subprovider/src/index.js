@@ -15,15 +15,16 @@ function makeError(msg, id) {
 }
 
 function obtainPathComponentsFromDerivationPath(derivationPath) {
-  // check if derivation path follows 44'/60'/x'/n pattern
-  const regExp = /^(44'\/(?:1|60|61)'\/\d+'?\/)(\d+)$/;
+  // check if derivation path follows 44'/60'/x'/n (ledger native)
+  // or 44'/60'/x'/[0|1]/0 (BIP44) pattern
+  const regExp = /^(44'\/6[0|1]'\/\d+'?\/(?:[0|1]\/)?)(\d+)$/;
   const matchResult = regExp.exec(derivationPath);
   if (matchResult === null) {
-    throw makeError(
-      "To get multiple accounts your derivation path must follow pattern 44'/60|61'/x'/n ",
-      "InvalidDerivationPath"
+    throw new Error(
+      "Derivation path must follow pattern 44'/60|61'/x'/n or BIP 44"
     );
   }
+
   return { basePath: matchResult[1], index: parseInt(matchResult[2], 10) };
 }
 
