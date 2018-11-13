@@ -47,6 +47,7 @@
   "files": [
     "/packages/web3-subprovider/lib/",
     "/packages/hw-transport-u2f/lib/",
+    "/packages/hw-app-eth/lib/",
     "yarn.lock"
   ]
 }
