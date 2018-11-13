@@ -42,7 +42,9 @@
     "flow-typed": "^2.4.0",
     "lerna": "2.9.0",
     "prettier": "^1.14.3",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.4.9",
+    "@ledgerhq/hw-app-eth": "^4.24.0",
+    "@ledgerhq/hw-transport-u2f": "^4.28.0"
   },
   "files": [
     "/packages/web3-subprovider/lib/",
