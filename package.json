@@ -21,6 +21,9 @@
     "publish": "yarn && lerna run clean && lerna run build && lerna publish --registry=https://registry.npmjs.org/"
   },
   "dependencies": {
+    "@ledgerhq/hw-app-eth": "^4.24.0",
+    "@ledgerhq/hw-transport": "^4.24.0",
+    "@ledgerhq/hw-transport-u2f": "^4.28.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -42,14 +45,11 @@
     "flow-typed": "^2.4.0",
     "lerna": "2.9.0",
     "prettier": "^1.14.3",
-    "uglify-js": "^3.4.9",
-    "@ledgerhq/hw-app-eth": "^4.24.0",
-    "@ledgerhq/hw-transport-u2f": "^4.28.0"
+    "uglify-js": "^3.4.9"
   },
   "files": [
     "/packages/web3-subprovider/lib/",
     "/packages/hw-transport-u2f/lib/",
-    "/packages/hw-app-eth/lib/",
     "yarn.lock"
   ]
 }
